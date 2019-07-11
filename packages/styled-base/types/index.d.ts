@@ -30,7 +30,7 @@ type JSXInEl = JSX.IntrinsicElements
 
 export type WithTheme<P, T> = P extends { theme: infer Theme }
   ? P & { theme: Exclude<Theme, undefined> }
-  : P & { theme: T }
+  : P & { theme?: T }
 
 export interface StyledOptions {
   label?: string
